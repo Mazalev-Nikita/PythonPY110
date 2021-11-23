@@ -3,9 +3,10 @@ import json
 
 def task():
     filename = "input.json"
-    # TODO считать содержимое JSON файла
+    with open(filename) as f:
+        a = json.load(f)
 
-    return ...  # TODO найти максимальный элемент по ключу score
+    return max(a, key=lambda item: item["score"])
 
 
 if __name__ == "__main__":

@@ -3,15 +3,15 @@ files:
 - name: main.py
   visible: true
   placeholders:
-  - offset: 256
-    length: 77
+  - offset: 358
+    length: 96
     placeholder_text: '# TODO c помощью метода строки strip очистить строку от непечатыемых
       символов'
     initial_state:
       length: 77
       offset: 256
     initialized_from_dependency: false
-    selected: false
+    selected: true
     status: Unchecked
     encrypted_possible_answer: line = line.strip()
   text: |

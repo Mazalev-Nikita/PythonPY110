@@ -3,7 +3,12 @@ OUTPUT_FILE = "output.txt"
 
 
 def task():
-    ...  # TODO перезаписать содержимое одного файла в другой
+    with open(INPUT_FILE) as file:
+        with open(OUTPUT_FILE, "w") as file2:
+                for world in file:
+                    file2.write(world.upper())
+
+
 
 
 if __name__ == "__main__":
@@ -12,3 +17,10 @@ if __name__ == "__main__":
     with open(OUTPUT_FILE) as file:
         for line in file:
             print(line, end="")
+
+
+
+    # with open(INPUT_FILE, "r") as input_file:
+    #     with open(OUTPUT_FILE, "w") as output_file:
+    #         for upper_line in map(str.upper, input_file):
+    #             output_file.write(upper_line)

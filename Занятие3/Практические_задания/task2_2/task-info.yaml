@@ -4,14 +4,14 @@ files:
   visible: true
   placeholders:
   - offset: 395
-    length: 85
+    length: 127
     placeholder_text: 'print(python_obj)  # TODO распечатать объект как JSON строку
       с отступами и кодировкой'
     initial_state:
       length: 85
       offset: 395
     initialized_from_dependency: false
-    selected: false
+    selected: true
     status: Unchecked
     encrypted_possible_answer: print(json.dumps(python_obj, indent=4, ensure_ascii=False))
   text: |

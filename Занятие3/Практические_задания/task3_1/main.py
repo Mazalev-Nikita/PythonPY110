@@ -9,12 +9,12 @@ def to_pickle_file(obj, filename: str) -> None:
     if not filename.endswith('.pickle'):
         filename += '.pickle'
 
-    with open(filename, "wb") as f:
+    with open(filename, "w") as f:
         pickle.dump(obj, f)
 
 
 def from_pickle_file(filename: str):
-    with open(filename, "rb") as f:
+    with open(filename, "r") as f:
         obj = pickle.load(f)
 
     return obj
@@ -34,4 +34,5 @@ if __name__ == "__main__":
     to_pickle_file(dict_pickle, "output")  # записываем объект в файл
     obj_from_file = from_pickle_file("output.pickle")  # считываем объект из файла
 
-    obj_from_file["func"]()  # вызываем функцию из словаря
+    obj_from_file["func"]()
+    print(dict_pickle)# вызываем функцию из словаря
